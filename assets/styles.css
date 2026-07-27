@@ -86,6 +86,7 @@ table.itinerary td.place{font-weight:600;}
 table.itinerary td.place-en a{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue);}
 table.itinerary td.place-en a:hover{color:var(--accent);}
 table.itinerary td.place-en{font-size:12.5px;color:var(--ink-muted);}
+.wp-badge{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:6px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-mono);font-size:9.5px;font-weight:600;line-height:1;vertical-align:middle;}
 table.itinerary td.price{font-family:var(--font-mono);font-size:12.5px;color:var(--amber);}
 table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
 
