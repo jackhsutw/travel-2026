@@ -16,6 +16,8 @@ a{color:inherit;}
 .masthead{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--bg) 82%,rgba(250,248,244,0));backdrop-filter:blur(6px);padding:18px 28px 14px 28px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
 .masthead .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;}
 .masthead h1{font-family:var(--font-display);font-size:20px;font-weight:600;margin:0;color:var(--ink);}
+.masthead h1 .home-link{text-decoration:none;}
+.masthead h1 .home-link:hover{color:var(--accent);}
 .masthead .meta{font-size:12px;color:var(--ink-muted);font-family:var(--font-mono);}
 
 .sidebar-toggle{order:-1;align-self:center;flex:none;width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:16px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;}
@@ -47,6 +49,29 @@ body.sidebar-toggled .sidebar{display:none;}
 
 .content{flex:1;min-width:0;padding:36px 40px 100px 40px;max-width:980px;}
 .day-section{scroll-margin-top:80px;}
+
+/* 首頁：37 天總覽表（.overview-wrap 跟每日頁面共用 .content，尺寸/留白已經一致，
+   這裡只放表格本身的樣式） */
+.overview-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+.overview-table th{text-align:left;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);padding:10px 14px 8px 14px;border-bottom:1px solid var(--line);}
+.overview-table td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);}
+.overview-table tr:last-child td{border-bottom:none;}
+.overview-table tr:hover td{background:var(--accent-dim);}
+.ov-day a{font-family:var(--font-mono);font-weight:600;font-size:13px;color:var(--accent);text-decoration:none;}
+.ov-day a:hover{color:var(--ink);}
+.ov-date{font-family:var(--font-mono);font-size:12px;color:var(--ink-muted);white-space:nowrap;}
+.ov-region{font-size:12.5px;color:var(--blue);white-space:nowrap;}
+.ov-highlight a{color:var(--ink);text-decoration:none;font-weight:500;}
+.ov-highlight a:hover{color:var(--accent);}
+.ov-tag{margin-left:8px;font-family:var(--font-mono);font-size:9px;color:var(--ink-muted);border:1px solid var(--line);padding:1px 5px;border-radius:3px;vertical-align:middle;white-space:nowrap;}
+.ov-lodging{font-size:12px;color:var(--ink-muted);}
+.overview-table tr.pending{opacity:.55;}
+.overview-table tr.pending .ov-highlight a{color:var(--ink-muted);}
+
+@media (max-width:480px){
+  .overview-table{font-size:12px;}
+  .overview-table td, .overview-table th{padding:8px 10px;}
+}
 
 .day-eyebrow{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;}
 .day-region{font-family:var(--font-mono);font-size:12px;color:var(--blue);margin-top:6px;}
