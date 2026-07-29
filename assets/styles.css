@@ -78,6 +78,9 @@ body.sidebar-toggled .sidebar{display:none;}
 .day-title{font-family:var(--font-display);font-size:32px;font-weight:600;margin:10px 0 4px 0;color:var(--ink);}
 .day-sub{font-size:13.5px;color:var(--ink-muted);margin-bottom:16px;}
 
+.day-alert{display:flex;align-items:flex-start;gap:8px;background:rgba(168,102,12,0.08);border:1px solid rgba(168,102,12,0.35);color:var(--amber);border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:18px;}
+.day-alert .ic{flex:none;font-size:14px;}
+
 .day-pager{display:flex;justify-content:space-between;margin:40px 0 10px 0;font-family:var(--font-mono);font-size:12.5px;}
 .day-pager a{text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:8px;padding:8px 14px;}
 .day-pager a:hover{border-color:var(--accent);}
@@ -112,6 +115,9 @@ table.itinerary td.place-en a{color:var(--blue);text-decoration:none;border-bott
 table.itinerary td.place-en a:hover{color:var(--accent);}
 table.itinerary td.place-en{font-size:12.5px;color:var(--ink-muted);}
 .wp-badge{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:6px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-mono);font-size:9.5px;font-weight:600;line-height:1;vertical-align:middle;}
+/* 固定時間行程的數字徽章改用紅色，跟地圖上固定行程的紅色標記對應（彈性探索
+   景點維持藍色字母徽章，對應地圖上的藍色標記） */
+.wp-badge.num{background:#c0392b;}
 table.itinerary td.price{font-family:var(--font-mono);font-size:12.5px;color:var(--amber);}
 table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
 
@@ -206,6 +212,7 @@ table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
   .day-region{font-size:9px;margin-top:2px;}
   .day-title{font-size:18px;margin:4px 0 2px 0;}
   .day-sub{font-size:10.5px;margin-bottom:8px;}
+  .day-alert{font-size:10px;padding:6px 10px;margin-bottom:8px;}
 
   /* 地圖：還沒貼圖的天數，整個地圖區塊（含容器）直接省略，避免留下一大塊空白；
      已貼圖的天數限制在固定高度內等比縮圖 */
