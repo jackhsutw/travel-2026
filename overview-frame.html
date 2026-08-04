@@ -23,5 +23,10 @@
   </div>
 </main>
 
+<script>
+if (window.parent !== window) {
+  window.parent.postMessage({source:'travel-manual', day:'', eyebrow:''}, '*');
+}
+</script>
 </body>
 </html>
