@@ -155,9 +155,10 @@ table.itinerary td.place-en a{color:var(--blue);text-decoration:none;border-bott
 table.itinerary td.place-en a:hover{color:var(--accent);}
 table.itinerary td.place-en{font-size:12.5px;color:var(--ink-muted);}
 .wp-badge{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:6px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-mono);font-size:9.5px;font-weight:600;line-height:1;vertical-align:middle;}
-/* 固定時間行程的數字徽章改用紅色，跟地圖上固定行程的紅色標記對應（彈性探索
-   景點維持藍色字母徽章，對應地圖上的藍色標記） */
-.wp-badge.num{background:#c0392b;}
+/* 固定時間行程的數字徽章改用橘色，跟地圖上固定行程的橘色標記對應（彈性探索
+   景點維持藍色字母徽章，對應地圖上的藍色標記；地圖的目的地固定用紅色「E」，
+   固定行程改橘色是為了不要跟那個紅色搞混） */
+.wp-badge.num{background:var(--amber);}
 table.itinerary td.price{font-family:var(--font-mono);font-size:12.5px;color:var(--amber);}
 table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
 
