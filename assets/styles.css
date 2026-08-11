@@ -251,9 +251,9 @@ table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
   .layout{display:block;}
   .content{padding:0;max-width:100%;}
   .day-section{scroll-margin-top:0;}
-  .day-eyebrow{font-size:15px;font-weight:600;}
+  .day-eyebrow{font-size:24px;font-weight:700;}
   .day-region{font-size:11px;margin-top:3px;}
-  .day-title{font-size:22px;margin:6px 0 3px 0;}
+  .day-title{font-size:18px;margin:8px 0 4px 0;}
   .day-sub{font-size:10.5px;margin-bottom:8px;}
   .day-alert{font-size:10px;padding:6px 10px;margin-bottom:8px;}
 
@@ -289,6 +289,15 @@ table.itinerary td.note{color:var(--ink-muted);font-size:12.5px;}
   table.itinerary th{padding:4px 6px 3px 6px;font-size:8px;}
   table.itinerary td{padding:4px 6px;}
   table.itinerary tr{page-break-inside:avoid;}
+  /* 這幾欄在螢幕版各自有自己的 font-size（12～12.5px），選擇器比上面
+     table.itinerary/th 的規則更精確，光靠上面那兩條蓋不掉，沒特別覆寫
+     的話印出來會跟其他欄位大小對不齊、看起來很亂，這裡統一收斂成跟
+     base 一致的列印字級 */
+  table.itinerary td.time,
+  table.itinerary td.place-en,
+  table.itinerary td.price,
+  table.itinerary td.note{font-size:8.5px;}
+  .wp-badge{width:14px;height:14px;font-size:8px;}
   .inline-photo{max-width:60px;max-height:45px;}
 
   .stats-row{gap:8px;margin-bottom:8px;}
